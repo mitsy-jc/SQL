@@ -1,3 +1,5 @@
+# This project contains the analysis of the Fortune 500 dataset:
+
 CREATE TABLE fortune_companies (
     company_id INTEGER PRIMARY KEY,
     company_name TEXT,
@@ -61,8 +63,8 @@ VALUES
 # Differentiate all companies that have either 10,000 or more employees or 1,400 or more employees.
 SELECT company_name,
 CASE
-	WHEN employees >= 10000 THEN '10,000+ employees'
-	WHEN employees >= 1400 THEN '1,400+ employees'
+     WHEN employees >= 10000 THEN '10,000+ employees'
+     WHEN employees >= 1400 THEN '1,400+ employees'
 END as 'amount_of_employees'
 FROM fortune_companies
 ORDER BY "amount_of_employees" desc
